@@ -1,0 +1,52 @@
+Studentid 
+Studentname
+Age
+state
+gender
+No of Subjects scored Centum
+No Of attempts 
+Total subject Scores
+
+Create Text boxes for above Properties
+Creates One submit button name as SubmitDetails
+
+
+1)Create index.jsp page, Create one hyperlink name as RetrieveExistedStudentDetails.
+
+2)Once click the link request goes to Servlet. 
+Create Servlet or Controller name as StudentController
+
+3) Redirect to StudentScores.jsp page
+In this page display existed student score details from  table
+In the same page Creates one hiperlinks name as AddNewStudentScoreDetails.
+
+4)if you click AddNewStudentScoreDetails request goes to Controller,
+  Redirect to NewStudent.jsp
+
+5)In NewStudent.jsp page inlcudes above attributes.
+ Create one submit button name as savedata
+
+6)if you click submit button request goes to controller
+  retrieve the parameter values from NewStudent.jsp Page  in controller.
+Sets all the values in Bean object.
+send the bean object to Service Layer.
+Service layer calls Dao layer, Store the details into Database.
+Student id should generate by using sequence.
+Then send the response to InsertSuccess.jsp page
+show the message StudentScores added Successfully.
+
+
+
+Validation:(Done by using HTML5)
+
+1.All the fields are compulsory
+2.Total  score  Of the Student cannot be less than the no of centuries * 100.
+3.StudentId should be auto generated.
+4.State details drop down list should contain values Tamilnadu,Karnataka,Pune,Mumbai.
+5.Use CSS for user interface
+
+
+CREATE TABLE Student_score(sudent_id NUMBER PRIMARY KEY,
+student_name VARCHAR2(40),age number(10), country  VARCHAR2(40),
+gender VARCHAR2(20),centum  NUMBER,attempts NUMBER, total_score NUMBER);
+
